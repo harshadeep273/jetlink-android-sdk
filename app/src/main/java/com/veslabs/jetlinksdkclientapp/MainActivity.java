@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.veslabs.jetlinklibrary.JetLinkApp;
-import com.veslabs.jetlinklibrary.config.JetLinkUIProperties;
-import com.veslabs.jetlinklibrary.config.JetLinkUser;
+import com.veslabs.jetlinklibrary.JetlinkApp;
+import com.veslabs.jetlinklibrary.config.JetlinkUIProperties;
+import com.veslabs.jetlinklibrary.config.JetlinkUser;
 import com.veslabs.jetlinklibrary.config.JetlinkConfig;
 import com.veslabs.jetlinklibrary.faq.FaqActivity;
-import com.veslabs.jetlinklibrary.messaging.JetLinkChatActivity;
+import com.veslabs.jetlinklibrary.messaging.JetlinkChatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,16 +25,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         JetlinkConfig jetlinkConfig = new JetlinkConfig("<YOUR-APP-ID>", "<YOUR-APP-KEY>");
-        JetLinkUIProperties uiProperties = new JetLinkUIProperties();
+        JetlinkUIProperties uiProperties = new JetlinkUIProperties();
         jetlinkConfig.setJetLinkUIProperties(uiProperties);
 
 
-        JetLinkUser user = new JetLinkUser();
+        JetlinkUser user = new JetlinkUser();
         user.setEmail("salman.khan@jetlink.com");
         user.setName("Salman");
         user.setSurname("Khan");
-        JetLinkApp.getInstance(getApplicationContext()).setUser(user);
-        JetLinkApp.getInstance(getApplicationContext()).init(jetlinkConfig);
+        JetlinkApp.getInstance(getApplicationContext()).setUser(user);
+        JetlinkApp.getInstance(getApplicationContext()).init(jetlinkConfig);
 
 
         btnMessaging= (Button) findViewById(R.id.btnJetLink);
